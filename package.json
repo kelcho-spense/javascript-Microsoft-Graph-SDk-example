@@ -1,0 +1,14 @@
+{
+    "name": "example-static-js-app",
+    "main": "index.js",
+    "scripts": {
+        "start": "http-server --cors -p 8080 -c-1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/"
+    },
+    "devDependencies": {
+        "http-server": "^14.1.1"
+    }
+}
