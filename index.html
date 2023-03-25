@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>JavaScript Microsoft Graph SPA</title>
+  <link rel="icon" href="./favicon.ico"> <!-- Suppress favicon error -->
+  <link href="https://unpkg.com/bootstrap@5/dist/css/bootstrap.css" rel="stylesheet" crossorigin>
+</head>
+
+<body>
+  <nav class="ms-3 mt-3"><h4>ToDo List JS App consuming Graph API SDK</h4></nav>
+  <main id="main-container" role="main" class="container">
+
+    <div id="content" style="display: none;">
+      <h4>Welcome <span id="userName"></span></h4>    
+    </div>
+
+    <a id="signin" onclick="displayUI(); return false;" href="#">
+      <img src="./images/ms-symbollockup_signin_light.png" alt="Sign in with Microsoft" />
+    </a>
+
+    <button type="button" class="btn btn-danger btn-sm" id="LogOutbtn" onclick="logOut()">
+     LogOut
+    </button>
+
+<div class="container mt-4">
+  <!-- execute button -->
+  <button type="button" class="btn btn-primary btn-lg" id="execute" onclick="run()">
+    <i class="fa fa-fw fa-inverse fa-play"></i>
+    Run Code
+  </button>
+
+</div>
+  </main>
+  <script src="https://alcdn.msauth.net/browser/2.1.0/js/msal-browser.min.js"
+    integrity="sha384-EmYPwkfj+VVmL1brMS1h6jUztl4QMS8Qq8xlZNgIT/luzg7MAzDVrRa2JxbNmk/e"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@microsoft/microsoft-graph-client/lib/graph-js-sdk.js"></script>
+  <script src="auth.js"></script>
+  <script src="graph.js"></script>
+  <script src="ui.js"></script>
+</body>
+</html>
