@@ -15,6 +15,12 @@ async function getUser() {
     return DisplayName;
 }
 
+async function run() {
+    console.log('run');
+    const user = await getUser();
+    console.log(user);
+}
+
 
 
 

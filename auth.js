@@ -1,8 +1,8 @@
 //MSAL configuration
 const msalConfig = {
     auth: {
-        clientId: "ddb790ff-ec30-489a-bc93-d209b5871ca9", // This is your client ID
-        authority: "https://login.microsoftonline.com/common", // This is your tenant ID
+        clientId: "<CLIENT ID>", // This is your client ID
+        authority: "https://login.microsoftonline.com/<TENANT ID>", // This is your tenant ID
         redirectUri: "http://localhost:8080", // This is your redirect URI
     }
 };
@@ -25,6 +25,7 @@ async function signIn() {
 function logOut() {
     msalClient.logout();
     sessionStorage.removeItem('msalAccount');
+    sessionStorage.removeItem('displayName');
 }
 
 //Get token from Graph

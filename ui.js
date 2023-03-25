@@ -23,8 +23,13 @@ async function callMe() {
 
         var signInButton = document.getElementById('signin');
         signInButton.style = "display: none";
-        var content = document.getElementById('content');
-        content.style = "display: block";
+
+        var userName = document.getElementById('userName');
+        var Name = sessionStorage.getItem('msalAccount');
+        userName.innerText = Name;
+
+
+
     } else {
         displayUI();
     }
